@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'musica_armonia',  # Nombre de tu base de datos MySQL
-        'USER': 'root',
-        'PASSWORD': 'admin',
+        'USER': 'escuela',
+        'PASSWORD': 'escuela12345',
         'HOST': 'localhost',  # Cambiar si la base de datos está en otro lugar
         'PORT': '3306',  # Puerto MySQL
     }

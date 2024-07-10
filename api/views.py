@@ -1,6 +1,8 @@
 from rest_framework import viewsets
 from .models import Teacher, ClassPack, Instrument, Price, Classes, Levels, TeacherClasses, Students, Enrollments, ClassPackDiscountRules, ClassPackClasses
 from .serializers import TeacherSerializer, ClassPackSerializer, InstrumentSerializer, PriceSerializer, ClassesSerializer, LevelsSerializer, TeacherClassesSerializer, StudentsSerializer, EnrollmentsSerializer, ClassPackDiscountRulesSerializer, ClassPackClassesSerializer
+from django.http import HttpResponse
+
 
 class TeacherViewSet(viewsets.ModelViewSet):
     queryset = Teacher.objects.all()
@@ -45,3 +47,7 @@ class ClassPackDiscountRulesViewSet(viewsets.ModelViewSet):
 class ClassPackClassesViewSet(viewsets.ModelViewSet):
     queryset = ClassPackClasses.objects.all()
     serializer_class = ClassPackClassesSerializer
+
+
+def index(request):
+    return HttpResponse("Escuela Música Armonía")

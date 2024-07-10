@@ -1,6 +1,9 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import TeacherViewSet, ClassPackViewSet, InstrumentViewSet, PriceViewSet, ClassesViewSet, LevelsViewSet, TeacherClassesViewSet, StudentsViewSet, EnrollmentsViewSet, ClassPackDiscountRulesViewSet, ClassPackClassesViewSet
+from django.urls import path
+from api import views
+
 
 router = DefaultRouter()
 router.register(r'teachers', TeacherViewSet)
@@ -16,5 +19,6 @@ router.register(r'class_pack_discount_rules', ClassPackDiscountRulesViewSet)
 router.register(r'class_pack_classes', ClassPackClassesViewSet)
 
 urlpatterns = [
+    path('',views.index,name='index'),
     path('', include(router.urls)),
 ]
