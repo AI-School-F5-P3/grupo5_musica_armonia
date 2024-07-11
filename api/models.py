@@ -80,7 +80,7 @@ class Student(models.Model):
         return f"{self.first_name} {self.last_name}"
 
     class Meta:
-        db_table = 'Student'
+        db_table = 'student'
 
 class Enrollment(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
