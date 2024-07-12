@@ -23,7 +23,7 @@ class Price(models.Model):
     description = models.CharField(max_length=255, null=True, blank=True)
     
     class Meta:
-        db_table = 'price'
+        db_table = 'prices'
 
 class Classe(models.Model):
     name = models.CharField(max_length=100)
@@ -53,7 +53,7 @@ class ClassPackDiscountRules(models.Model):
     discount_percentage = models.DecimalField(max_digits=5, decimal_places=2)
     
     class Meta:
-        db_table = 'classpackdiscountrules'
+        db_table = 'classpackdiscountrule'
 
 class ClassPackClasse(models.Model):
     _class = models.ForeignKey(Classe, on_delete=models.CASCADE, db_column='_class_id')
