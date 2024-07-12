@@ -1,5 +1,5 @@
 """
-URL configuration for ProyectoAcademiaMusica project.
+URL configuration for academia_musica project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -20,6 +20,12 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD:ProyectoAcademiaMusica/ProyectoAcademiaMusica/urls.py
 path('api/', include('api.urls')),
     path('docs/', include_docs_urls(title='Documentación del API Academia de Música')),
     ]
+=======
+    path('api/', include('api.urls')),
+    path('docs/', include_docs_urls(title='Documentación del API Academia de Música')),
+]
+>>>>>>> b7e1bb70ddb22e40c701d737e491e8344fa1e640:academia_musica/urls.py
