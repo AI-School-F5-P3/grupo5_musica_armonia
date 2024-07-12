@@ -21,27 +21,27 @@ class PriceSerializer(serializers.ModelSerializer):
         model = Price
         fields = '__all__'
 
-class ClassesSerializer(serializers.ModelSerializer):
+class ClasseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Classe
         fields = '__all__'
 
-class LevelsSerializer(serializers.ModelSerializer):
+class LevelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Level
         fields = '__all__'
 
-class TeacherClassesSerializer(serializers.ModelSerializer):
+class TeacherClasseSerializer(serializers.ModelSerializer):
     class Meta:
         model = TeacherClasse
         fields = '__all__'
 
-class StudentsSerializer(serializers.ModelSerializer):
+class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = '__all__'
 
-class EnrollmentsSerializer(serializers.ModelSerializer):
+class EnrollmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Enrollment
         fields = '__all__'
@@ -51,7 +51,7 @@ class ClassPackDiscountRulesSerializer(serializers.ModelSerializer):
         model = ClassPackDiscountRules
         fields = '__all__'
 
-class ClassPackClassesSerializer(serializers.ModelSerializer):
+class ClassPackClasseSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClassPackClasse
         fields = '__all__'

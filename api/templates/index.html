@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Music School</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Welcome to the Database Management System</h1>
-        <div class="mt-4">
-            <a href="{% url 'table_view' 'student' %}" class="btn btn-primary">Students</a>
-            <a href="{% url 'table_view' 'teachers' %}" class="btn btn-primary">Teachers</a>
-            <a href="{% url 'table_view' 'classes' %}" class="btn btn-primary">Classes</a>
-            <a href="{% url 'table_view' 'enrollments' %}" class="btn btn-primary">Enrollments</a>
-            <a href="{% url 'table_view' 'prices' %}" class="btn btn-primary">Prices</a>
-            <a href="{% url 'table_view' 'class_packs' %}" class="btn btn-primary">Class Packs</a>
+    <div class="container mt-5">
+        <h1 class="text-center">Music School</h1>
+        <div class="text-center mt-4">
+            <a href="{% url 'show_tables' %}" class="btn btn-primary">Mostrar Tablas</a>
+            <a href="{% url 'new_enrollment' %}" class="btn btn-success">Nueva Inscripción</a>
+            <a href="{% url 'new_student' %}" class="btn btn-info">Nuevo Estudiante</a>
         </div>
     </div>
 </body>
