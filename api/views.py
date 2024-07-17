@@ -191,7 +191,7 @@ def delete_instrument(request, instrument_id):
         return redirect('home')  # Ajusta 'home' según el nombre de tu vista principal
     context = {
         'object_type': 'instrumento',
-        'teacher': instrument
+        'instrument': instrument
     }
     return render(request, delete_url, context)
 
