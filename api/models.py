@@ -117,7 +117,7 @@ class Enrollment(models.Model):
     enrollment_date = models.DateField()
     class_number = models.IntegerField(default=1)
 
-    def __str__(self):
+    def __str__(self): # Este método es una representación textual legible del objeto
         return f"{self.student.first_name} {self.student.last_name} - {self.class_id.name}"
 
     class Meta:

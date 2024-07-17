@@ -24,7 +24,7 @@ pymysql.install_as_MySQLdb()
 from pathlib import Path
 
 # BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent #BASE_DIR almacena la ruta absoluta al directorio base del proyecto Django
 
 
 # Configuración rápida para el desarrollo

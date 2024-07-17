@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import TeacherViewSet, ClassPackViewSet, InstrumentViewSet, PriceViewSet, ClassViewSet, LevelViewSet, TeacherClassViewSet, StudentViewSet, EnrollmentViewSet, ClassPackDiscountRuleViewSet, ClassPackClassViewSet, home
 from . import views
 
-router = DefaultRouter()
+router = DefaultRouter() # Se instancia un DefaultRouter, que permite automáticamente generar URLs para los ViewSet registrados. Los register() métodos asociarán las URL con los ViewSet específicos
 router.register(r'teacher', TeacherViewSet)
 router.register(r'class_pack', ClassPackViewSet)
 router.register(r'instrument', InstrumentViewSet)
