@@ -17,9 +17,9 @@ router.register(r'class_pack_discount_rule', ClassPackDiscountRuleViewSet)
 router.register(r'class_pack_class', ClassPackClassViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('', home, name='home'),
-    path('create-enrollment/', views.create_enrollment, name='create_enrollment'),
+    path('', include(router.urls)), # para manejar las URLs registradas por los viewset
+    path('', home, name='home'), # Define una ruta vacía que apunta a la función home definida en views.py.
+    path('create-enrollment/', views.create_enrollment, name='create_enrollment'), # define la url, especifica la función 'create_enrollment' en views.py y le asigna el nombre 'create_enrollment' para que puede ser referenciada dentro del proyecto. 
     path('create-student/', views.create_student, name='create_student'),
     path('create_teacher/', views.create_teacher, name='create_teacher'),
     path('execute_query_month/', views.execute_query_month, name='execute_query_month'),

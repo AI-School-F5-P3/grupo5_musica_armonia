@@ -83,7 +83,7 @@ def home(request):
         'class_pack_discounts': ClassPackDiscountRule.objects.all(),
         'class_pack_classes': ClassPackClass.objects.all(),
     }
-    return render(request, 'api/home.html', context)
+    return render(request, 'api/home.html', context) # La función render genera una respuesta HTTP utilizando una plantilla HTML ('api/home.html') y el contexto proporcionado
 
 # Vista para crear una inscripción
 def create_enrollment(request):
@@ -426,19 +426,3 @@ def execute_query_total_due(request):
         data = cursor.fetchall()
 
     return render(request, 'api/query_results_total_due.html', {'columns': columns, 'data': data})
-
-# Definición de formularios usando ModelForm
-class EnrollmentForm(forms.ModelForm):
-    class Meta:
-        model = Enrollment
-        fields = '__all__'
-
-class StudentForm(forms.ModelForm):
-    class Meta:
-        model = Student
-        fields = '__all__'
-
-class TeacherForm(forms.ModelForm):
-    class Meta:
-        model = Teacher
-        fields = '__all__'
